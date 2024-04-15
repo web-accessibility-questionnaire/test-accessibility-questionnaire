@@ -18,7 +18,7 @@ body {
 /* Styling Nav-Bar */
 .navbar {
   background-color: #007bff;  /*nav bar background color*/
-  padding: 10px 0;  /*top and bottom padding for navbar*/
+  padding: 15px 0;  /*top and bottom padding for navbar*/
 }
 
 .navbar-list {
@@ -30,19 +30,38 @@ body {
 
 .navbar-list li {
   display: inline-block; /*display list items horizontally*/
-  margin-right: 20px;  /*add right margin between list items*/
+  margin-right: 10px;  /*add right margin between list items*/
 }
 
 .navbar-list li a {
   color: #fff; /*text colour to white*/
   text-decoration: none; /*remove underline from links*/
-  font-size: 18px;  /*font size for link elements*/
-  border-right: 1px solid #fff;  /*adds a thin line on the right side of each link*/
-  padding-right: 10px;  /*adds some space on the right side of each link*/
+  font-size: 16px;  /*font size for link elements*/
+  padding: 8px 16px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3 ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-list li a:hover {
-  text-decoration: underline; /*underline links when hovered over*/
+  background-color: #000 !important;
+  border-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-list li a.guide-button {
+  background-color: #0056b3;
+}
+
+.navbar-list li a.accessibility-button {
+  background-color: #0056b3;
+}
+
+.navbar-list li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Center align the title */
@@ -54,6 +73,7 @@ body {
 .precaution {
   color: red; /*set text colour to red*/
   font-weight: bold;  /*make the text bold*/
+  font-size: 18px;
 }
 
 /* ethical considerations Section */
@@ -138,15 +158,23 @@ button:hover {
   margin-bottom: 10px;  /* add some space below the heading */
 }
 
-/* Accessibility Score */
-#result .accessibility-score {
-  color: #007bff;   /* set the text colour to blue */
+.score-box {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 
-/* Accessibility Category */
-#result .accessibility-category {
-  color: #28a745;   /* set the text colour to green */
+.category-box {
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
 }
+
+
+
+
 
 /* Recommendation Styles */
 .recommendations-section {
@@ -198,6 +226,7 @@ button:hover {
   margin-top: 20px;  /*add a little extra space above the content section*/
 }
 
+.guide-section .purpose-of-questionnaire-section,
 .guide-section .functionality-of-tool-section,
 .guide-section .introduction-section,
 .guide-section .score-calculation-section,
